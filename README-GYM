@@ -1,0 +1,136 @@
+# Sistema de Gestión para Gimnasio 💪🏋️
+
+Sistema web administrativo completo para la gestión integral de un gimnasio, incluyendo clientes, membresías, personal, coaches y reportes financieros.
+
+## 📋 Descripción
+
+Aplicación web desarrollada en PHP y MySQL que permite administrar todas las operaciones de un gimnasio de manera eficiente. El sistema cuenta con autenticación de usuarios, gestión de personal y coaches, control de membresías, asignación de horarios y generación de reportes con estadísticas visuales.
+
+## ✨ Características Principales
+
+- **Sistema de Autenticación**: Login seguro con roles de usuario (administrador, personal)
+- **Dashboard Interactivo**: Visualización de estadísticas clave en tiempo real
+- **Gestión de Personal**: CRUD completo de colaboradores con asignación de cargos
+- **Gestión de Coaches**: Administración de entrenadores con especialidades y sueldos
+- **Control de Horarios**: Asignación y gestión de turnos para coaches
+- **Seguimiento de Clientes**: Monitoreo del estado de membresías
+- **Reportes y Estadísticas**: Análisis de ingresos mensuales y distribución de membresías
+- **Base de Datos MySQL**: Gestión robusta de información
+
+## 🗂️ Estructura del Proyecto
+
+```
+├── login.php                      # Página de inicio de sesión
+├── logout.php                     # Cierre de sesión
+├── conexion.php                   # Configuración de conexión a base de datos
+├── dashboard.php                  # Panel principal con estadísticas
+├── personal.php                   # Gestión de personal del gimnasio
+├── coaches.php                    # Gestión de entrenadores
+├── horarios.php                   # Administración de horarios
+├── seguimiento.php                # Seguimiento de clientes
+├── reportes.php                   # Reportes e indicadores financieros
+├── get_horarios_coach.php         # API para obtener horarios de coach
+└── get_horarios_disponibles.php   # API para consultar horarios libres
+```
+
+## 🎯 Módulos del Sistema
+
+### Autenticación
+Sistema de login con validación de credenciales (DNI o Email) y contraseña, gestión de sesiones seguras y roles diferenciados.
+
+### Dashboard
+Panel de control con métricas en tiempo real: total de clientes, membresías activas, membresías por vencer (1-10 días) y membresías vencidas.
+
+### Gestión de Personal
+- Agregar, editar y eliminar colaboradores
+- Asignación de cargos específicos
+- Control de estados (activo/inactivo)
+- Validación de DNI único
+
+### Gestión de Coaches
+- Registro completo de entrenadores (datos personales, especialidad, sueldo)
+- Asignación de horarios disponibles
+- Gestión de múltiples horarios por coach
+- Actualización de información y salarios
+
+### Horarios
+Administración visual de turnos disponibles, asignación de coaches a horarios específicos y consulta de disponibilidad.
+
+### Reportes
+- Ingresos mensuales con filtros por año y mes
+- Distribución de membresías por tipo
+- Estadísticas generales del gimnasio
+- Visualización gráfica de datos
+
+## 💻 Tecnologías Utilizadas
+
+- **Backend**: PHP 7.4+
+- **Base de Datos**: MySQL 5.7+
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Arquitectura**: MVC simplificado
+- **Seguridad**: Prepared Statements (prevención de SQL Injection)
+
+## 🚀 Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/sistema-gimnasio.git
+   ```
+
+2. Configura la base de datos:
+   - Importa el archivo SQL en tu servidor MySQL
+   - Actualiza las credenciales en `conexion.php`
+
+3. Configura el servidor:
+   ```php
+   // conexion.php
+   $servidor = "localhost";
+   $usuario = "tu_usuario";
+   $password = "tu_password";
+   $base_datos = "gimnasio_db";
+   ```
+
+4. Inicia el servidor local (XAMPP, WAMP, LAMP):
+   - Coloca los archivos en la carpeta `htdocs` o `www`
+   - Accede a `http://localhost/sistema-gimnasio/login.php`
+
+## 📊 Funcionalidades por Módulo
+
+| Módulo | Funcionalidades |
+|--------|-----------------|
+| **Dashboard** | Estadísticas, alertas de vencimiento, resumen general |
+| **Personal** | CRUD completo, gestión de cargos, control de accesos |
+| **Coaches** | Registro, edición, asignación de horarios, gestión salarial |
+| **Horarios** | Visualización de turnos, asignación, disponibilidad |
+| **Seguimiento** | Monitoreo de membresías, alertas de vencimiento |
+| **Reportes** | Análisis financiero, gráficos, exportación de datos |
+
+## 🔒 Seguridad
+
+- Sesiones PHP para control de acceso
+- Prepared Statements para prevenir inyección SQL
+- Validación de datos en servidor y cliente
+- Verificación de roles para acceso a módulos
+
+## 📝 Base de Datos
+
+### Tablas Principales
+- `gimnasio_colaboradores`: Personal administrativo
+- `gimnasio_cargo`: Cargos y roles
+- `coach`: Entrenadores del gimnasio
+- `horario`: Turnos disponibles
+- `CLIENTE`: Información de clientes
+- `MEMBRESIA`: Membresías activas
+- `TIPO_MEMBRESIA`: Tipos de planes disponibles
+
+## 🤝 Contribuciones
+
+Este es un proyecto académico/privado. Para consultas o sugerencias, contacta al desarrollador.
+
+## 📄 Licencia
+
+Uso privado para gestión de gimnasio.
+
+---
+
+*Desarrollado con 💪 para optimizar la gestión de gimnasios*
