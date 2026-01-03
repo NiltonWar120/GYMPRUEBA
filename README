@@ -74,7 +74,7 @@ Administración visual de turnos disponibles, asignación de coaches a horarios 
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/sistema-gimnasio.git
+   git clone https://github.com/NiltonWar120/GYMPRUEBA.git
    ```
 
 2. Configura la base de datos:
